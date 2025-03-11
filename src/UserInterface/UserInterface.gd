@@ -9,7 +9,7 @@ var paused: = false setget set_paused
 
 func _ready() -> void:
 	PlayerData.connect("score_updated", self, "update_interface")
-	PlayerData.connect("score_died", self, "_on_PlayerData_player_died")
+	PlayerData.connect("player_died", self, "_on_PlayerData_player_died")
 	update_interface()
 
 func _on_PlayerData_player_died() -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Objects/Portal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Objects/Coin.tscn" type="PackedScene" id=2]
@@ -8,254 +8,6 @@
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=6]
 [ext_resource path="res://assets/background.png" type="Texture" id=7]
 [ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=8]
-
-[sub_resource type="Animation" id=1]
-resource_name = "Fade_out"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.6 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "queue_free"
-} ]
-}
-
-[sub_resource type="Animation" id=2]
-length = 0.001
-
-[sub_resource type="Animation" id=3]
-resource_name = "bouncing"
-length = 1.4
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Coin:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 0.277392, 2.73208 ),
-"update": 0,
-"values": [ Vector2( 0, 10 ), Vector2( 0, -10 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "Fade_out"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.6 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "queue_free"
-} ]
-}
-
-[sub_resource type="Animation" id=5]
-length = 0.001
-
-[sub_resource type="Animation" id=6]
-resource_name = "bouncing"
-length = 1.4
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Coin:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 0.277392, 2.73208 ),
-"update": 0,
-"values": [ Vector2( 0, 10 ), Vector2( 0, -10 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=7]
-resource_name = "Fade_out"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.6 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "queue_free"
-} ]
-}
-
-[sub_resource type="Animation" id=8]
-length = 0.001
-
-[sub_resource type="Animation" id=9]
-resource_name = "bouncing"
-length = 1.4
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Coin:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 0.277392, 2.73208 ),
-"update": 0,
-"values": [ Vector2( 0, 10 ), Vector2( 0, -10 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=10]
-resource_name = "Fade_out"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.6 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "queue_free"
-} ]
-}
-
-[sub_resource type="Animation" id=11]
-length = 0.001
-
-[sub_resource type="Animation" id=12]
-resource_name = "bouncing"
-length = 1.4
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Coin:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 0.277392, 2.73208 ),
-"update": 0,
-"values": [ Vector2( 0, 10 ), Vector2( 0, -10 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
 
 [node name="Level01" type="Node2D"]
 __meta__ = {
@@ -296,47 +48,29 @@ position = Vector2( 1264, 512 )
 position = Vector2( 1864, 512 )
 
 [node name="Coin" parent="." instance=ExtResource( 2 )]
-position = Vector2( 416, 344 )
+position = Vector2( 400, 376 )
 
 [node name="Coin2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 488, 344 )
-
-[node name="AnimationPlayer" parent="Coin2" index="2"]
-anims/Fade_out = SubResource( 1 )
-anims/RESET = SubResource( 2 )
-anims/bouncing = SubResource( 3 )
+position = Vector2( 464, 376 )
 
 [node name="Coin3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 552, 344 )
-
-[node name="AnimationPlayer" parent="Coin3" index="2"]
-anims/Fade_out = SubResource( 4 )
-anims/RESET = SubResource( 5 )
-anims/bouncing = SubResource( 6 )
+position = Vector2( 528, 376 )
 
 [node name="Coin4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 856, 392 )
-
-[node name="AnimationPlayer" parent="Coin4" index="2"]
-anims/Fade_out = SubResource( 7 )
-anims/RESET = SubResource( 8 )
-anims/bouncing = SubResource( 9 )
+position = Vector2( 984, 336 )
 
 [node name="Coin5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1336, 456 )
+position = Vector2( 1344, 464 )
 
-[node name="AnimationPlayer" parent="Coin5" index="2"]
-anims/Fade_out = SubResource( 10 )
-anims/RESET = SubResource( 11 )
-anims/bouncing = SubResource( 12 )
+[node name="Coin6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1736, 384 )
+
+[node name="Coin7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2104, 344 )
 
 [node name="Portal2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1848, 256 )
 next_scene = ExtResource( 5 )
 
+[editable path="UserInterface/UserInterface"]
 [editable path="Player"]
-[editable path="Coin"]
-[editable path="Coin2"]
-[editable path="Coin3"]
-[editable path="Coin4"]
-[editable path="Coin5"]
