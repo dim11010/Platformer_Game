@@ -159,13 +159,13 @@ extents = Vector2( 8.5, 14 )
 scale = Vector2( 3, 3 )
 collision_mask = 8
 script = ExtResource( 2 )
-speed = Vector2( 450, 1000 )
+speed = Vector2( 300, 800 )
 gravity = 4000.0
 
 [node name="Player" type="AnimatedSprite" parent="."]
 frames = SubResource( 3 )
 animation = "walk"
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -173,7 +173,6 @@ position = Vector2( -0.5, 1.5 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 position = Vector2( 7.27596e-12, -24 )
 scale = Vector2( 1.17037, 0.696084 )
 current = true
